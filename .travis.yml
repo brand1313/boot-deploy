@@ -24,7 +24,7 @@ after_success:
   - docker build -t brand13/jre ./
   - echo "$Docker_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
   - docker push brand13/jre
-  - echo "success!!!!"
+  - echo "success!!!!!"
 
 deploy:
   - provider: s3
