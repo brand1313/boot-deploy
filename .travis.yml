@@ -20,6 +20,19 @@ after_success:
   - docker push brand13/jre
   - echo "success!!!!"
 
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: deploy-boot
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: public_read
+    wait-until-deployed: true
+    on:
+      repo: brand1313/boot-deploy
+      branch: master
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
