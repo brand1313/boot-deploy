@@ -52,7 +52,7 @@ deploy:
       repo: brand1313/boot-deploy
       branch: master
 
-  notification:
-    email:
-      recipients:
-        - brand13@naver.com
+notification:
+  email:
+    recipients:
+      - brand13@naver.com
